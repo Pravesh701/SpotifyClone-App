@@ -3,16 +3,27 @@ import {Text, StyleSheet, View, Image, TouchableOpacity, SectionList, FlatList} 
 import constants, { vh, vw, DesignHeight, DesignWidth} from '../../../constants/index';
 
 export default class SectionListForAll extends Component {
+  componentDidMount(){
+    
+  }
+
+  clickSectionListItems =()=>{
+    console.warn("API DATA ", this.props.apiData)
+  }
+
   renderItemRecentPlayed = rowData => {
     const {item, index} = rowData;
     return (
-      <TouchableOpacity style={styles.conatiner}>
-        <Image source={item.image} style={styles.renderImageStyle} />
+      <TouchableOpacity 
+      onPress = {this.clickSectionListItems}
+      style={styles.conatiner}>
+        <Image resizeMode = {'center'} source={item.image} style={styles.renderImageStyle} />
         <Text style={styles.renderListTextStyle}>{item.title}</Text>
         <Text>{item.artist}</Text>
       </TouchableOpacity>
     );
   };
+  
   render() {
     return (
       <View style={styles.mainContainer}>
@@ -46,22 +57,22 @@ const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
     width: vw(100),
-    marginRight: 20,
-    marginTop: 20,
+    marginEnd: vw(40),
+    marginTop: vh(20),
   },
   renderImageStyle: {
-    width: 140,
-    height: 140,
+    width: vw(140),
+    height: vh(140),
   },
   recentPlayedTextColor: {
-    fontSize: 30,
+    fontSize: vw(30),
     fontFamily: 'CircularStd-Bold',
     color: '#fff',
-    marginLeft: 20,
+    marginLeft: vw(20),
   },
   renderListTextStyle: {
     fontFamily: 'CircularStd-Medium',
-    fontSize: 18,
+    fontSize: vw(18),
     color: '#fff',
   },
 });

@@ -54,9 +54,9 @@ const Data = [
   },
 ];
 
-HEADER_MAX_MARGIN_TOP = 100;
-HEADER_MIN_MARGIN_TOP = 0;
-HEADER_MARGIN_TOP = 100;
+HEADER_MAX_MARGIN_TOP = vh(100);
+HEADER_MIN_MARGIN_TOP = vh(0);
+HEADER_MARGIN_TOP = vh(100);
 
 export default class Search extends Component {
   state = {
@@ -165,9 +165,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+    top: vh(0),
+    left: vh(0),
+    right: vh(0),
   },
   searchViewAnimatedStyle: {
     marginTop: HEADER_MARGIN_TOP,
@@ -208,16 +208,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    marginEnd: 20,
+    marginEnd: vw(20),
     borderRadius: vw(10),
   },
   flatListContainerStyle: {},
   flatListTextStyle: {
-    fontSize: 16,
+    fontSize: vw(16),
     fontWeight: 'bold',
   },
   genersTextStyle: {
-    fontSize: 16,
+    fontSize: vw(16),
     fontWeight: 'bold',
     color: '#fff',
     marginTop: vh(20),

@@ -6,6 +6,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import constants, {vh, vw, DesignHeight, DesignWidth} from '../../constants';
 
 import AppNavigator from './libraryTab/index';
 
@@ -40,15 +41,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   textHeaderStyle: {
-    fontSize: 30,
+    fontSize: vw(30),
     fontFamily: 'CircularStd-Bold',
     color: '#fff',
-    marginLeft: 10,
+    marginLeft: vw(10),
   },
   podcastTextStyle: {
-    fontSize: 30,
+    fontSize: vw(30),
     fontFamily: 'CircularStd-Bold',
     color: '#9e9e9e',
-    marginLeft: 10,
+    marginLeft: vw(10),
   },
 });

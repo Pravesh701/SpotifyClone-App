@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   SafeAreaView,
   ViewPropTypes,
-  
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -51,13 +50,15 @@ export default class Premium extends Screen {
         colors={['#009688', '#4caf50', '#424242', '#000000']}>
         <SafeAreaView>
           <Text style={styles.header}>Example Demo</Text>
-          <TouchableOpacity onPress={() => this.navigateTo('Playlist')}>
+          {/* <TouchableOpacity onPress={() => this.navigateTo('Playlist')}>
             <Text>Playlist Example</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={this.playMusicSample}>
+          </TouchableOpacity> */}
+          <TouchableOpacity
+            style={styles.playExampleStyle}
+            onPress={this.playMusicSample}>
             <Text>Play Example</Text>
           </TouchableOpacity>
-          <Text>It is {this.state.date.toLocaleTimeString()}.</Text>
+          {/* <Text>It is {this.state.date.toLocaleTimeString()}.</Text> */}
         </SafeAreaView>
       </LinearGradient>
     );
@@ -119,5 +120,9 @@ const styles = StyleSheet.create({
   controlButtonText: {
     fontSize: 18,
     textAlign: 'center',
+  },
+  playExampleStyle: {
+    fontSize: 16,
+    margin: 50,
   },
 });

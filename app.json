@@ -1,4 +1,7 @@
 {
   "name": "ProjectEuler",
-  "displayName": "ProjectEuler"
+  "displayName": "ProjectEuler",
+  "customFields": {
+    "jsBuildNumber": "1208"
+  }
 }
