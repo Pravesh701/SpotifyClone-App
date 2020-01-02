@@ -29,11 +29,13 @@ export default class SectionListForAll extends Component {
         onPress={this.clickSectionListItems}
         style={styles.conatiner}>
         <Image
-          resizeMode={'center'}
+          resizeMode={'contain'}
           source={item.image}
           style={styles.renderImageStyle}
         />
-        <Text style={styles.renderListTextStyle}>{item.title}</Text>
+        <Text numberOfLines={1} style={styles.renderListTextStyle}>
+          {item.title}
+        </Text>
         <Text>{item.artist}</Text>
       </TouchableOpacity>
     );

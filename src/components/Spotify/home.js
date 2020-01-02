@@ -153,25 +153,25 @@ export default class Home extends Component {
     };
   }
 
-  // componentDidMount = () => {
-  //   this.fetchTopTracks();
-  // };
-  // fetchTopTracks() {
-  //   const apiKey = '3d266b41641f26868d0179a72f627202';
-  //   const url = `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${apiKey}&format=json`;
+  componentDidMount = () => {
+    this.fetchTopTracks();
+  };
+  fetchTopTracks() {
+    const apiKey = '17fde79d7b9eb93639c791a93517569f';
+    const url = `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${apiKey}&format=json`;
 
-  //   //API.get('',{params: {method: 'chart.gettoptracks', api_key: apiKey,format:'json'}})
-  //   API.get(url)
-  //     .then(response => {
-  //       console.log(response.data.tracks.track);
-  //       this.setState({
-  //         getTopTracks: response.data.tracks,
-  //       });
-  //     })
-  //     .catch(function(error) {
-  //       console.log(error);
-  //     });
-  // }
+    //API.get('',{params: {method: 'chart.gettoptracks', api_key: apiKey,format:'json'}})
+    API.get(url)
+      .then(response => {
+        console.log('API Response ', response.data.tracks.track);
+        this.setState({
+          getTopTracks: response.data.tracks,
+        });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 
   onPressSettings = () => {
     //Alert.alert('Welcome in Settings');
